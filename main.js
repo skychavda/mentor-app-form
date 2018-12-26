@@ -8,21 +8,31 @@ var genderValidate = 1;
 var classValidate = 1;
 var linkValidate = 1;
 var phoneValidate = 1;
+var addressValidate = 1;
 
 function Function(){
     document.getElementById('generalForm').classList.add("generalFocus");
+    document.getElementById('generalForm').classList.remove("no-active");
     document.getElementById('localForm').classList.remove("generalFocus");
+    document.getElementById('localForm').classList.add("no-active");
     document.getElementById('contactForm').classList.remove("generalFocus");
+    document.getElementById('contactForm').classList.add("no-active");
 };
 function localFunction(){
     document.getElementById('localForm').classList.add("generalFocus");
+    document.getElementById('localForm').classList.remove("no-active");
     document.getElementById('generalForm').classList.remove("generalFocus");
+    document.getElementById('generalForm').classList.add("no-active");
     document.getElementById('contactForm').classList.remove("generalFocus");
+    document.getElementById('contactForm').classList.add("no-active");
 };
 function contactFunction(){
     document.getElementById('contactForm').classList.add("generalFocus");
+    document.getElementById('contactForm').classList.remove("no-active");
     document.getElementById('localForm').classList.remove("generalFocus");
+    document.getElementById('localForm').classList.add("no-active");
     document.getElementById('generalForm').classList.remove("generalFocus");
+    document.getElementById('generalForm').classList.add("no-active");
 };
 
 
@@ -35,6 +45,7 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
 function validform(){
   var gender = document.getElementsByName('radioGender');
   for(var i=0; i<gender.length;i++){
@@ -46,7 +57,15 @@ function validform(){
   if(genderValidate==1){
     document.getElementById('genderError').innerHTML = "Please select gender";
   }
-  if(firstValidate == 1&&lastValidate == 1&&emailValidate == 1&& dateValidate==1&&monthValidate==1&&yearValidate==1&&genderValidate==1&&classValidate==1&&linkValidate==1&&phoneValidate==1){
+  if(firstValidate==1||lastValidate == 1||emailValidate == 1||dateValidate==1||monthValidate==1||yearValidate==1||genderValidate==1||classValidate==1||linkValidate==1||phoneValidate==1||addressValidate==1){
+    document.getElementById('firstNameError').classList.remove("display");
+    document.getElementById('lastNameError').classList.remove("display");
+    document.getElementById('classError').classList.remove("display");
+    document.getElementById('dobError').classList.remove("display");
+    document.getElementById('linkError').classList.remove("display");
+    document.getElementById('phoneError').classList.remove("display");
+    document.getElementById('emailError').classList.remove("display");
+    document.getElementById('addressError').classList.remove("display");
     document.getElementById('submitError').innerHTML = "Enter all fields";
     return false;
   }else {
@@ -107,30 +126,39 @@ function lastValidation(){
 
 function dateValidation(){
   var date = document.getElementById('date').value;
-  if(date.value="DD"){
+  if(date=="DD"){
     document.getElementById('date').classList.add("error");
+    document.getElementById('dobError').innerHTML = "Enter date";
     dateValidate = 1;
   }else {
+    document.getElementById('date').classList.remove("error");
+    document.getElementById('dobError').innerHTML = " ";
     dateValidate = 0;
   }
 };
 
 function monthValidation(){
   var month = document.getElementById('month').value;
-  if(month.value="MM"){
+  if(month=="MM"){
     document.getElementById('month').classList.add("error");
+    document.getElementById('dobError').innerHTML = "Enter month";
     monthValidate = 1;
   }else {
+    document.getElementById('month').classList.remove("error");
+    document.getElementById('dobError').innerHTML = " ";
     monthValidate = 0;
   }
 };
 
 function yearValidation(){
   var year = document.getElementById('year').value;
-  if(year.value="YYYY"){
+  if(year=="YYYY"){
     document.getElementById('year').classList.add("error");
+    document.getElementById('dobError').innerHTML = "Enter year";
     yearValidate = 1;
   }else {
+    document.getElementById('year').classList.remove("error");
+    document.getElementById('dobError').innerHTML = " ";
     yearValidate = 0;
   }
 };
@@ -178,7 +206,13 @@ function phoneValidation(){
   }
 };
 
-//
-// document.getElementById('general').onclick = function(){
-//   document.getElementsByClassName('col-lg-4').className += " .generalFocus";
-// };
+function addressValidation(){
+  var region = document.getElementById('regionInput').value;
+  var street = document.getElementById('streetInput').value;
+  if(region==""||street==""){
+    addressValidate=1;
+  }else {
+    document.getElementById('addressError').innerHTML = " ";
+    addressValidate=0;
+  }
+};

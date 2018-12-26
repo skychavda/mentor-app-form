@@ -17,7 +17,8 @@ body{
 
 .mentor-form{
   box-shadow: 0px 0px 10px #ddd;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  padding: 16px 0;
   border-radius: 4px;
   background-color: #f6f6f6;
 }
@@ -140,6 +141,10 @@ input:checked + .radioLabel:before {
   padding-left: .3rem!important;
 }
 
+.form-wrap{
+  padding-right:100px; padding-left:100px;
+}
+
 .error{
   border-bottom-color: red !important;
 }
@@ -159,6 +164,21 @@ input:checked + .radioLabel:before {
   box-shadow: none!important;
 }
 
+.btn:not(:disabled):not(.disabled):active{
+  background-image: linear-gradient(#2ee2da,#35629a)!important;
+}
+.btn-primary:not(:disabled):not(.disabled):active{
+  background-color: transparent!important;
+}
+
+.display{
+  display: none;
+  color: red;
+}
+
+.mentor-content{
+  margin:2rem auto; text-align: center;
+}
 /* @media (max-width:2560px) {
   .circleOutline{
     margin-left: 14.5rem;
@@ -167,31 +187,89 @@ input:checked + .radioLabel:before {
     margin-left: 269px;
   }
 } */
-@media (max-width:1440px) {
+@media (max-width:2560px) {
   .circleOutline{
-    margin-left: 10.1rem;
+    margin-left: 16.8rem;
   }
   .line{
-    margin-left: 196px;
+    margin-left: 307px;
+  }
+}
+@media (max-width:1440px) {
+  .circleOutline{
+    margin-left: 12.5rem;
+  }
+  .line{
+    margin-left: 235px;
   }
 }
 @media (max-width: 1024px) {
   .circleOutline{
-    margin-left: 5.9rem;
+    margin-left: 8.4rem;
   }
   .line{
-    margin-left: 126px;
+    margin-left: 167px;
   }
   #generalForm, #localForm, #contactForm{
-    padding-right: 5px;
-    padding-left: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 @media (max-width: 768px) {
+  .no-active{
+    display: none;
+  }
   .circleOutline{
-    margin-left: 3.4rem;
+    margin-left: 5.8rem;
   }
   .line{
-    margin-left: 84px;
+    margin-left: 124px;
+  }
+}
+@media (max-width: 548px) {
+  .no-active{
+    display: none;
+  }
+  .circleOutline{
+    margin-left: 1.2rem;
+  }
+  .line{
+    margin-left: 48px;
+  }
+}
+@media (max-width:425px) {
+  .no-active{
+    display: none;
+  }
+  .circleOutline{
+    margin-left: 2.5rem;
+  }
+  .line{
+    margin-left: 69px;
+  }
+  .form-wrap{
+    padding: 0 45px;
+  }
+}
+@media (max-width:375px) {
+  .no-active{
+    display: none;
+  }
+  .circleOutline{
+    margin-left: 2rem;
+  }
+  .line{
+    margin-left: 61px;
+  }
+}
+@media (max-width:320px) {
+  .no-active{
+    display: none;
+  }
+  .circleOutline{
+    margin-left: 1.5rem;
+  }
+  .line{
+    margin-left: 53px;
   }
 }

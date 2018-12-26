@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin: 1rem 0; color:#fff;">
       <h1 class="text-center display-4">Mentor application form</h1>
     </div>
     <div id="mentor-wrap" class="mentor-wrap">
       <div class="container-fluid mentor-form">
-          <div class="row justify-content-center" style="padding: 0 100px; margin:2rem auto; text-align: center;">
+          <div class="row justify-content-center mentor-content">
             <div class="col-4 navigation active color-aaa" href="#general" onclick="Function();">
               <a class="generalButton" id="general">General</a>
               <div class="circleOutline">
@@ -36,22 +36,22 @@
               </div>
             </div>
           </div>
-          <form action="action.html" onsubmit="return validform()" style="margin: 7rem 0; ">
-            <div class="row" style="padding: 0 100px;">
-              <div id="generalForm" class="col-md-4 ">
-                  <div class="form-group">
+          <form action="action.html" onsubmit="return validform()" style="margin: 5rem 0; ">
+            <div class="row form-wrap">
+              <div id="generalForm" class="col-lg-4 generalFocus">
+                  <div class="form-group" style="margin-top:1rem;">
                     <label for="firstNameInput" class="font-weight-bold color-aaa">First Name</label>
-                    <input type="text" class="form-control effect" name="fname" id="firstNameInput" placeholder="Enter your name"  onblur="firstValidation()" title="Your name (no special characters, diacritics are okay)">
+                    <input type="text" class="form-control effect" name="fname" id="firstNameInput" placeholder="Enter your name"  onblur="firstValidation()">
                     <span class="focus-border"></span>
-                    <div id="firstNameError" style="color: red;"></div>
+                    <span id="firstNameError" class="display" style="color: red;">Enter your name</span>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" style="margin:4rem 0;">
                     <label for="firstNameInput" class="font-weight-bold color-aaa">Last Name</label>
-                    <input type="text" class="form-control effect" name="lname" id="lastNameInput" placeholder="Enter your last name"  title="Check your email" onblur="lastValidation()">
+                    <input type="text" class="form-control effect" name="lname" id="lastNameInput" placeholder="Enter your last name" onblur="lastValidation()">
                     <span class="focus-border"></span>
-                    <div id="lastNameError" style="color: red;"></div>
+                    <div id="lastNameError" class="display" style="color: red;">Enter your last name</div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" style="margin:4rem 0;">
                     <div><label for="firstNameInput" class="font-weight-bold color-aaa">Date of birth</label></div>
                     <select name="DD" class="effect dob color-aaa" id="date" onblur="dateValidation()">
                       <option selected disabled>DD</option>
@@ -80,82 +80,84 @@
                       <option value="5">5</option>
                       <option value="6">6</option>
                     </select>
+                    <div id="dobError" class="display" style="color: red;">Enter DOB</div>
                   </div>
                   <div class="form-group">
                     <div><label for="radioGender" class="font-weight-bold color-aaa">Gender</label></div>
                     <div class="form-check form-check-inline">
-                      <input type="radio" id="radioGenderMale" name="radioGender" class="form-check-input">
+                      <input type="radio" id="radioGenderMale" name="radioGender" class="form-check-input" value="male">
                       <label class="form-check-label radioLabel color-aaa" for="radioGenderMale">Male</label>
                     </div>
-                    <div class="form-check form-check-inline">
-                      <input type="radio" id="radioGenderFemale" name="radioGender" class="form-check-input">
+                    <div class="form-check form-check-inline float-right">
+                      <input type="radio" id="radioGenderFemale" name="radioGender" class="form-check-input" value="female">
                       <label class="form-check-label radioLabel color-aaa" for="radioGenderFemale">Female</label>
                     </div>
-                    <div id="genderError" style="color: red;"></div>
+                    <div id="genderError" class="display" style="color: red;">Select gender</div>
                   </div>
               </div>
-              <div class="col-md-4" id="localForm">
-                  <div class="form-group">
+              <div class="col-lg-4 no-active" id="localForm">
+                  <div class="form-group" style="margin-top:1rem;">
                     <label for="classInput" class="font-weight-bold color-aaa">Class</label>
                     <input type="text" class="form-control effect" id="classInput" placeholder="Enter your class" onblur="classValidation()">
                     <span class="focus-border"></span>
-                    <div id="classError"></div>
+                    <div id="classError" class="display" style="color: red;">Enter class</div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" style="margin:4rem 0;">
                     <label for="firstNameInput" class="font-weight-bold color-aaa">Program</label>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="porgramRadio" id="program1" checked>
+                      <input class="form-check-input" type="radio" name="porgramRadio" value="graphic_web_design" id="program1" checked>
                       <label class="form-check-label radioLabel color-aaa" for="program1">Graphic & Web Design</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="porgramRadio" id="program2" value="">
+                      <input class="form-check-input" type="radio" name="porgramRadio" id="program2" value="digital_marketing">
                       <label class="form-check-label radioLabel color-aaa" for="program2">Digital Marketing</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="porgramRadio" id="program3" value="">
+                      <input class="form-check-input" type="radio" name="porgramRadio" id="program3" value="system_administrator">
                       <label class="form-check-label radioLabel color-aaa" for="program3">System Administrator</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="porgramRadio" id="program4" value="">
+                      <input class="form-check-input" type="radio" name="porgramRadio" id="program4" value="programming">
                       <label class="form-check-label radioLabel color-aaa" for="program4">Programming</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="porgramRadio" id="program5" value="">
+                      <input class="form-check-input" type="radio" name="porgramRadio" id="program5" value="ms_offfice">
                       <label class="form-check-label radioLabel color-aaa" for="program5">MS Office</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="porgramRadio" id="program6" value="">
+                      <input class="form-check-input" type="radio" name="porgramRadio" id="program6" value="3d_modeling">
                       <label class="form-check-label radioLabel color-aaa" for="program6">3D Modeling</label>
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" style="margin-bottom: 1rem ;">
                     <label for="linkInput" class="font-weight-bold color-aaa">Link</label>
-                    <input type="text" class="form-control effect color-aaa" id="link" placeholder="https://" onblur="linkValidation()">
+                    <input type="text" class="form-control effect color-aaa" id="link" name="link" placeholder="https://" onblur="linkValidation()">
                     <span class="focus-border"></span>
-                    <div id="linkError"></div>
+                    <div id="linkError" class="display" style="color: red;">Enter link</div>
                   </div>
               </div>
-              <div class="col-md-4" id="contactForm">
-                  <div class="form-group">
+              <div class="col-lg-4 no-active" id="contactForm">
+                  <div class="form-group" style="margin-top:1rem;">
                     <label for="phoneInput" class="font-weight-bold color-aaa">Phone</label>
-                    <input type="text" class="form-control effect" id="phoneInput" maxlength="10" placeholder="Enter your number" onblur="phoneValidation()">
+                    <input type="text" class="form-control effect" id="phoneInput" maxlength="10" name="number" placeholder="Enter your number" onblur="phoneValidation()">
                     <span class="focus-border"></span>
-                    <div id="phoneError"></div>
+                    <div id="phoneError" class="display" style="color: red;">Enter phone number</div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" style="margin:4rem 0;">
                     <label for="mailInput" class="font-weight-bold color-aaa">Mail</label>
-                    <input type="mail" class="form-control effect" id="emailInput" placeholder="Enter your mail" onblur="emailValidation()">
+                    <input type="mail" class="form-control effect" id="emailInput" name="email" placeholder="Enter your mail" onblur="emailValidation()">
                     <span class="focus-border"></span>
-                    <div id="emailError"></div>
+                    <div id="emailError" class="display" style="color: red;">Enter email address</div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" style="margin:4rem 0;">
                     <label for="addressInput" class="font-weight-bold color-aaa">Address</label>
-                    <input type="text" class="form-control effect1" id="addressInput" placeholder="Region">
+                    <input type="text" class="form-control effect1" id="regionInput" placeholder="Region" onblur="addressValidation()">
                     <span class="focus-border-address"></span>
-                    <input type="text" class="form-control effect" id="streetinput" placeholder="Street">
+                    <input type="text" class="form-control effect" id="streetInput" placeholder="Street" onblur="addressValidation()">
                     <span class="focus-border"></span>
+                    <div id="addressError" class="display" style="color: red;">Enter address</div>
                   </div>
-                  <input class="btn btn-primary float-right" type="submit" value="Submit" onclick="validation()">
+                  <input class="btn btn-primary float-right" type="submit" value="Submit" style="margin-bottom:1rem;">
                   <div id="submitError" style="color: red;"></div>
               </div>
             </div>
@@ -163,6 +165,7 @@
       </div>
     </div>
     <script type="text/javascript" src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
