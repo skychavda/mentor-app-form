@@ -196,7 +196,7 @@ input:checked + .radioLabel:before {
     margin-left: 307px;
   }
 }
-@media (max-width: 1536px) {
+@media (max-width: 1537px) {
   .circleOutline{
     margin-left: 13.4rem;
   }
