@@ -152,6 +152,7 @@ input:checked + .radioLabel:before {
 .btn{
   border-radius: 20px!important;
   width: 140px;
+  border: none;
 }
 
 .btn-primary{
