@@ -196,6 +196,14 @@ input:checked + .radioLabel:before {
     margin-left: 55.8%;
   }
 }
+@media (max-width: 1537px) {
+  .circleOutline{
+    margin-left: 13.4rem;
+  }
+  .line{
+    margin-left: 251px;
+  }
+}
 @media (max-width:1440px) {
   .circleOutline{
     margin-left: 47%;
