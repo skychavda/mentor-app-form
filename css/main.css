@@ -83,8 +83,8 @@ body{
 }
 
 #generalForm, #localForm, #contactForm{
-  padding-right: 90px;
-  padding-left: 90px;
+  padding-right: 70px;
+  padding-left: 70px;
 }
 
 input[type="radio"]{
@@ -190,26 +190,35 @@ input:checked + .radioLabel:before {
 } */
 @media (max-width:2560px) {
   .circleOutline{
-    margin-left: 16.8rem;
+    margin-left: 48%;
   }
   .line{
-    margin-left: 307px;
+    margin-left: 55.8%;
   }
 }
 @media (max-width:1440px) {
   .circleOutline{
-    margin-left: 12.5rem;
+    margin-left: 47%;
   }
   .line{
-    margin-left: 235px;
+    margin-left: 55.5%;
+  }
+}
+@media (min-width:1025px) and (max-width: 1439px) {
+  .circleOutline{
+    margin-left: 47%;
+  }
+  #generalForm, #localForm, #contactForm{
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }
 @media (max-width: 1024px) {
   .circleOutline{
-    margin-left: 8.4rem;
+    margin-left: 45%;
   }
   .line{
-    margin-left: 167px;
+    margin-left: 56.7%;
   }
   #generalForm, #localForm, #contactForm{
     padding-right: 20px;
@@ -221,10 +230,10 @@ input:checked + .radioLabel:before {
     display: none;
   }
   .circleOutline{
-    margin-left: 5.8rem;
+    margin-left: 43%;
   }
   .line{
-    margin-left: 124px;
+    margin-left: 58%;
   }
 }
 @media (max-width: 548px) {
@@ -232,10 +241,10 @@ input:checked + .radioLabel:before {
     display: none;
   }
   .circleOutline{
-    margin-left: 1.2rem;
+    margin-left: 39%;
   }
   .line{
-    margin-left: 48px;
+    margin-left: 61%;
   }
 }
 @media (max-width:425px) {
@@ -243,10 +252,10 @@ input:checked + .radioLabel:before {
     display: none;
   }
   .circleOutline{
-    margin-left: 2.5rem;
+    margin-left: 36%;
   }
   .line{
-    margin-left: 69px;
+    margin-left: 67%;
   }
   .form-wrap{
     padding: 0 45px;
