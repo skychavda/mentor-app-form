@@ -192,7 +192,7 @@ input:checked + .radioLabel:before {
     margin-left: 48%;
   }
   .line{
-    margin-left: 55.8%;
+    margin-left: 54.8%;
   }
 }
 @media (max-width: 1537px) {
