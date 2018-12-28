@@ -10,6 +10,10 @@ var linkValidate = 1;
 var phoneValidate = 1;
 var addressValidate = 1;
 
+function init(){
+  document.getElementById('myForm').reset();
+};
+
 function Function(){
     document.getElementById('generalForm').classList.add("generalFocus");
     document.getElementById('generalForm').classList.remove("no-active");

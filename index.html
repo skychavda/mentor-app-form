@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   </head>
-  <body>
+  <body onload="init()">
     <div class="container-fluid" style="margin: 1rem 0; color:#fff;">
       <h1 class="text-center display-4">Mentor application form</h1>
     </div>
@@ -36,7 +36,7 @@
               </div>
             </div>
           </div>
-          <form action="action.html" onsubmit="return validform()" style="margin: 5rem 0;" autocomplete="off">
+          <form action="action.html" id="myForm" onsubmit="return validform()" style="margin: 5rem 0;">
             <div class="row form-wrap">
               <div id="generalForm" class="col-lg-4 generalFocus">
                   <div class="form-group" style="margin-top:1rem;">
@@ -86,11 +86,11 @@
                     <div><label for="radioGender" class="font-weight-bold color-aaa">Gender</label></div>
                     <div class="">
                       <div class="form-check form-check-inline">
-                        <input type="radio" id="radioGenderMale" name="radioGender" class="form-check-input" value="male">
+                        <input type="radio" id="radioGenderMale" name="radioGender" class="form-check-input radiobutton" value="male">
                         <label class="form-check-label radioLabel color-aaa" for="radioGenderMale">Male</label>
                       </div>
                       <div class="form-check form-check-inline float-right" style="margin-top:4px;">
-                        <input type="radio" id="radioGenderFemale" name="radioGender" class="form-check-input" value="female">
+                        <input type="radio" id="radioGenderFemale" name="radioGender" class="form-check-input radiobutton" value="female">
                         <label class="form-check-label radioLabel color-aaa" for="radioGenderFemale">Female</label>
                       </div>
                     </div>

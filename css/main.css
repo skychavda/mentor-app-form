@@ -179,6 +179,17 @@ input:checked + .radioLabel:before {
 .mentor-content{
   margin:2rem auto; text-align: center;
 }
+
+.radiobutton{
+  display: inline-block!important;
+  position: absolute!important;
+  left: -9999px!important;
+}
+input[type="radio"]{
+    display:inline;
+    position:absolute;
+    left:-9999px;
+}
 /* @media (max-width:2560px) {
   .circleOutline{
     margin-left: 14.5rem;
